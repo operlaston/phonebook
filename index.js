@@ -86,7 +86,7 @@ app.post('/api/persons', (request, response) => {
     errorMessage = 'name already exists in phonebook'
   } else {
     const person = {
-      id: generateId(),
+      id: String(generateId()),
       name: body.name,
       number: body.number
     }
